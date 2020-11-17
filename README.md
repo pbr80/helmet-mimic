@@ -1,2 +1,2 @@
 # helmet-mimic
-GET a monster from PF2E bestiary.
+Random 'Monster of the Day' from [Pathfinder 2E's Bestiary (Archives of Nethys)](https://2e.aonprd.com).  
