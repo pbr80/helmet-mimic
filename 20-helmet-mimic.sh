@@ -1,0 +1,9 @@
+#! /bin/bash
+# by Patrick Brady
+# Updated: 04-09-21
+# https://github.com/pbr80/helmet-mimic
+# Adds a 'Monster of the Day' from Pathfinder 2E Bestiary to MOTD
+# Used in conjunction with helmet-mimic.py
+
+# Note: modify path to location of python script if necessary
+python ~/helmet-mimic/helmet-mimic.py

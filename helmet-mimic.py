@@ -1,7 +1,8 @@
 #! /usr/bin/python3
 # by Patrick Brady
-# Random 'Monster of the Day' from [Pathfinder 2E's Bestiary (Archives of Nethys)](https://2e.aonprd.com)
-# max creature page = 1051
+# Updated: 04-09-21 (Creature count: 1051)
+# Pulls random creature from [(Archives of Nethys)](https://2e.aonprd.com)
+# Works in conjunction with '20-helmet-mimic.sh' to append MOTD.
 
 from bs4 import BeautifulSoup
 import requests
@@ -22,9 +23,10 @@ bio = content.find('h1', class_='title').next_sibling
 get_spans = content.find_all('span')
 statblock = [span.get_text() for span in get_spans]
 
-print('\n' + title)
+print('\n=== MONSTER OF THE DAY ===\n' + title)
 print(url)
 print('\n' + textwrap.fill(bio, width=90) + '\n')
 
 for stat in statblock:
     print(textwrap.fill(stat))
+print('=== MONSTER OF THE DAY ===')
