@@ -1,6 +1,7 @@
 #! /usr/bin/python3
 # by Patrick Brady
 # Random 'Monster of the Day' from [Pathfinder 2E's Bestiary (Archives of Nethys)](https://2e.aonprd.com)
+# max creature page = 1051
 
 from bs4 import BeautifulSoup
 import requests
@@ -8,7 +9,7 @@ import random
 import textwrap
 
 address = "https://2e.aonprd.com/Monsters.aspx?ID="
-n = str(random.randint(1, 1014))
+n = str(random.randint(1, 1051))
 url = address+n
 page = requests.get(url)
 soup = BeautifulSoup(page.content, 'html.parser')
