@@ -6,4 +6,4 @@
 # Used in conjunction with helmet-mimic.py
 
 # Note: modify path to location of python script if necessary
-python ~/helmet-mimic/helmet-mimic.py
+python /home/shenanigans/helmet-mimic/helmet-mimic.py
