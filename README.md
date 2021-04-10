@@ -6,9 +6,7 @@ helmet-mimic consists of two files
    run on ssh login.
 
 ## Installation (Debian/Ubuntu):
-1. Edit '20-helmet-mimic'  
-   a) change path to where you saved the python script  
-   b) filename may also be changed if '20' is being used  
+1. Edit '20-helmet-mimic', change path to where you saved the python script  
    `nano 20-helmet-mimic`
 2. Copy '20-helmet-mimic' to /etc/update-motd/ (requires sudo permission to do so)  
 `sudo cp 20-helmet-mimic /etc/update-motd/`
