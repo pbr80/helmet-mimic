@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 # by Patrick Brady
-# Updated: 04-09-21 (Creature count: 1051)
+# Updated: 2021-06-03 (Creature count: 1390)
 # Pulls random creature from [(Archives of Nethys)](https://2e.aonprd.com)
 # Works in conjunction with '20-helmet-mimic.sh' to append MOTD.
 
@@ -10,7 +10,7 @@ import random
 import textwrap
 
 address = "https://2e.aonprd.com/Monsters.aspx?ID="
-n = str(random.randint(1, 1051))
+n = str(random.randint(1, 1391))
 url = address+n
 page = requests.get(url)
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -23,10 +23,10 @@ bio = content.find('h1', class_='title').next_sibling
 get_spans = content.find_all('span')
 statblock = [span.get_text() for span in get_spans]
 
-print('\n=== MONSTER OF THE DAY ===\n' + title)
+print('\n= = = = = =\n' + title)
 print(url)
 print('\n' + textwrap.fill(bio, width=90) + '\n')
 
 for stat in statblock:
     print(textwrap.fill(stat))
-print('=== MONSTER OF THE DAY ===')
+print('= = = = = =')
