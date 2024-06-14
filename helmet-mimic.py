@@ -1,8 +1,7 @@
 #! /usr/bin/python3
 # by Patrick Brady
-# Updated: 2021-06-03 (Creature count: 1390)
-# Pulls random creature from [(Archives of Nethys)](https://2e.aonprd.com)
-# Works in conjunction with '20-helmet-mimic.sh' to append MOTD.
+# Updated: 2024Jun13
+# Creature count: 3252
 
 from bs4 import BeautifulSoup
 import requests
@@ -16,7 +15,8 @@ page = requests.get(url)
 soup = BeautifulSoup(page.content, 'html.parser')
 
 main = soup.find(id='main')
-content = main.find(id='ctl00_MainContent_DetailedOutput')
+#content = main.find(id='ctl00_MainContent_DetailedOutput')
+content = main.find(id='ctl00_RadDrawer1_Content_MainContent_DetailedOutput')
 title = content.find('h1', class_='title').get_text()
 bio = content.find('h1', class_='title').next_sibling
 
