@@ -15,7 +15,7 @@ page = requests.get(url)
 soup = BeautifulSoup(page.content, 'html.parser')
 
 main = soup.find(id='main')
-#content = main.find(id='ctl00_MainContent_DetailedOutput')
+# content = main.find(id='ctl00_MainContent_DetailedOutput')
 content = main.find(id='ctl00_RadDrawer1_Content_MainContent_DetailedOutput')
 title = content.find('h1', class_='title').get_text()
 bio = content.find('h1', class_='title').next_sibling
@@ -25,7 +25,7 @@ statblock = [span.get_text() for span in get_spans]
 
 print('\n= = = = = =\n' + title)
 print(url)
-print('\n' + textwrap.fill(bio, width=90) + '\n')
+print('\n' + textwrap.fill(str(bio), width=90) + '\n')
 
 for stat in statblock:
     print(textwrap.fill(stat))
