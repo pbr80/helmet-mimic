@@ -1,2 +1,2 @@
 #! /bin/bash
-python "$(dirname "$0")/helmet-mimic.py"
+python "$(dirname "$0")/pathfinder_MOTD.py"

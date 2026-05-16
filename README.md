@@ -3,7 +3,7 @@ Python script that pulls a random stat block from Pathfinder 2E bestiary hosted 
 Can also be used to append your Linux MOTD banner.
 
 ## Project consists of two files:
-1. **'helmet-mimic.py'** : simple python script that pulls the stat block. Can be run as-is. 
+1. **'pathfinder_MOTD.py'** : simple python script that pulls the stat block. Can be run as-is. 
 2. **'20-helmet-mimic'** : (optional) bash script to update your MOTD banner. Requires sudo access to use.
 
 ### 20-helmet-mimic (optional)
