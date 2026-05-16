@@ -1,5 +1,5 @@
 # helmet-mimic Project
-Python script that pulls a random stat block from Pathfinder 2E bestiary hosted at [Archive of Nethys](https://2e.anonprd.com).  
+Python script that pulls a random stat block from Pathfinder 2E bestiary hosted at [Archive of Nethys](https://2e.aonprd.com).  
 Can also be used to append your Linux MOTD banner.
 
 ## Project consists of two files:
