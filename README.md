@@ -1,18 +1,49 @@
-# helmet-mimic Project
-Python script that pulls a random stat block from Pathfinder 2E bestiary hosted at [Archive of Nethys](https://2e.aonprd.com).  
-Can also be used to append your Linux MOTD banner.
+# helmet-mimic
 
-## Project consists of two files:
-1. **'pathfinder_MOTD.py'** : simple python script that pulls the stat block. Can be run as-is. 
-2. **'20-helmet-mimic'** : (optional) bash script to update your MOTD banner. Requires sudo access to use.
+Random Pathfinder 2E monster stat blocks for your terminal and MOTD. 
 
-### 20-helmet-mimic (optional)
-Placing 20-helmet-mimic in /etc/update-motd/ will allow it to be run on ssh login.
+`helmet-mimic` fetches a random creature stat block from the [Archive of Nethys](https://2e.aonprd.com) Pathfinder 2E wiki. Run it standalone to get a monster of the day, or integrate it with your Linux MOTD so every SSH login greets you with a new monster.
 
-#### Installation (Debian/Ubuntu):
-1. Edit '20-helmet-mimic'. Set path in the script to point to the python script location  
-   `editor 20-helmet-mimic`
-2. Copy '20-helmet-mimic' to /etc/update-motd/ (requires sudo permission to do so)  
-`sudo cp 20-helmet-mimic /etc/update-motd/`
+## Features
 
-Wait approx 10 minutes for update-motd to update. Enjoy.
+- Random monster stat blocks from all PF2E bestiaries
+- Optional Linux MOTD integration via `update-motd.d`
+- Minimal dependencies (`beautifulsoup4`, `requests`)
+
+## Requirements
+
+- Python 3.6+
+- `beautifulsoup4`
+- `requests`
+
+## Installation
+
+```bash
+git clone https://github.com/pbr80/helmet-mimic.git
+cd helmet-mimic
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Standalone - get a random monster
+
+```bash
+python pathfinder_MOTD.py
+```
+
+### MOTD Integration (Optional)
+
+1. Copy both scripts to your MOTD directory:
+   ```bash
+   sudo cp pathfinder_MOTD.py 20-helmet-mimic /etc/update-motd.d/
+   ```
+2. Make the helper script executable:
+   ```bash
+   sudo chmod +x /etc/update-motd.d/20-helmet-mimic
+   ```
+3. SSH into your machine - you'll see a new monster greeting on every login!
+
+## License
+
+[MIT License](LICENSE)
