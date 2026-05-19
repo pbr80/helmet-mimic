@@ -46,4 +46,4 @@ python pathfinder_MOTD.py
 
 ## License
 
-[MIT License](LICENSE)
+[GNU General Public License](LICENSE)
